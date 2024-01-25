@@ -1,0 +1,545 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset default browser styles */
+body, p, .paragraph {
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+body {
+  
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #4c4c4c;
+  display: block;
+}
+
+p, .paragraph {
+  font-weight: 400;
+  color: #4c4c4c;
+  font-size: 15px;
+  line-height: 1.8;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Heading styles */
+h1, .h1 {
+  color: #000;
+  font-family: 'IBM Plex Mono', monospace;
+  line-height: 1.2;
+  font-size: 2.5rem;
+}
+
+h2, .h2 {
+  color: #000;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 2rem;
+}
+
+h3, .h3 {
+  font-size: 1.5rem;
+}
+
+h4, .h4 {
+  font-size: 1.1rem;
+}
+
+h5, .h5 {
+  font-size: 0.9rem;
+}
+
+h6, .h6 {
+  font-size: 0.7rem;
+}
+
+/* Button styles */
+.btn {
+  font-size: 1.1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  border: 0;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn-primary {
+  background: #413857;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #413857;
+}
+
+.btn-transparent {
+  background: transparent;
+  color: #413857;
+  font-weight: bold;
+}
+
+/* Background and Text Colors */
+body {
+  background-color: #fff;
+}
+
+.text-primary {
+  color: #413857!important;
+}
+
+.text-dark {
+  color: #000 !important;
+}
+
+.text-light {
+  color: #999999 !important;
+}
+
+/* Margin and Padding Utility Classes */
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+
+.mb-40 {
+  margin-bottom: 40px !important;
+}
+
+.mb-50 {
+  margin-bottom: 50px !important;
+}
+
+.mb-60 {
+  margin-bottom: 60px !important;
+}
+
+.mb-70 {
+  margin-bottom: 70px !important;
+}
+
+.mb-80 {
+  margin-bottom: 80px !important;
+}
+
+.mb-90 {
+  margin-bottom: 90px !important;
+}
+
+.mb-100 {
+  margin-bottom: 100px !important;
+}
+
+/* Other Utility Classes */
+.zindex-1 {
+  z-index: 1;
+}
+
+.rounded-lg {
+  border-radius: 15px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Navbar and Navigation Styles */
+.navigation {
+  padding: 1rem;
+  transition: 0.3s ease;
+  background-color: #413857;
+}
+
+.navigation.nav-bg {
+  padding: 0.75rem 2rem;
+}
+
+.navbar .nav-item .nav-link {
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
+
+
+/*my css*/
+
+#logo-header {
+  height: 100px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+/* .fixed-top {
+  position: sticky;
+} */
+
+
+/* .bg-primary {
+  background-color: #413857!important;
+} */
+
+/* Add your CSS styles for the layers here */
+
+.layer {
+  position: absolute;
+}
+
+#l2 {
+  left: -283.325px;
+  top: 188.489px;
+}
+
+#l3 {
+  left: 455.328px;
+  top: 199.987px;
+}
+
+#l4 {
+  left: 563.379px;
+  top: 198.325px;
+}
+
+#l5 {
+  left: 970.217px;
+  top: 99.83px;
+}
+
+#l6 {
+  left: 87.7654px;
+  top: 907.422px;
+}
+
+#l7 {
+  left: 214.598px;
+  top: 814.668px;
+}
+
+#l8 {
+  left: 545.023px;
+  top: 734.893px;
+}
+
+#l9 {
+  left: 1028.31px;
+  top: 752.232px;
+}
+
+
+.hero-area h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 4rem;
+}
+
+p-lg, .paragraph-lg {
+  font-size: 22px;
+}
+
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.font-secondary {
+  font-family: 'IBM Plex Mono', monospace !important;
+}
+
+.section-title {
+  margin-bottom: 80px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+h2, .h2 {
+  font-size: 60px;
+}
+
+.progress-wrapper {
+  height: 130px;
+  overflow: hidden;
+
+}
+
+.wave::before, .wave::after {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  bottom: 0;
+  left: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 45%;
+  transform: translateX(-50%) rotate(0);
+  -webkit-animation: rotate 6s linear infinite;
+  animation: rotate 6s linear infinite;
+  z-index: 10;
+}
+
+/* skills */
+.progress-wrapper {
+  height: 130px;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.wave::before, .wave::after {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  bottom: 0;
+  left: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 45%;
+  transform: translateX(-50%) rotate(0);
+  -webkit-animation: rotate 6s linear infinite;
+  animation: rotate 6s linear infinite;
+  z-index: 10;
+}
+.wave::after {
+  border-radius: 47%;
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateX(-50%) rotate(0);
+  -webkit-animation: rotate 10s linear -5s infinite;
+          animation: rotate 10s linear -5s infinite;
+  z-index: 20;
+}
+
+@-webkit-keyframes rotate {
+  50% {
+    transform: translateX(-50%) rotate(180deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  50% {
+    transform: translateX(-50%) rotate(180deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+/* /skills */
+
+
+.education {
+  background-image: url("/assets/backgrounds/education-bg.png");
+  background-position-y: -200px;
+
+}
+
+.logo-education {
+  margin-right: 10px; 
+}
+
+.section {
+  padding: 80px;
+}
+
+/* service */
+.hover-bg-primary {
+  transition: 0.3s ease;
+}
+.hover-bg-primary:hover {
+  background:#413857;
+}
+.hover-bg-primary:hover * {
+  color: #fff;
+}
+
+.active-bg-primary {
+  transition: 0.3s ease;
+  background: #413857;
+}
+.active-bg-primary * {
+  color: #fff;
+}
+
+.hover-shadow {
+  transition: 0.2s ease;
+}
+.hover-shadow:hover {
+  box-shadow: 0px 18px 40px 8px rgba(224, 241, 255, 0.54) !important;
+}
+
+/* /service */
+
+.hero-area {
+  background-color: #9086ab;
+  background-image: url(/assets/images/Devices-amico.png);
+  background-position: center;
+  height: 300px;
+  background-size: unset;
+  background-position: 30% 30%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+}
+
+.profile-img {
+  object-fit: cover;
+  width: 224px;
+  border-radius: 50%;
+  height: 224px;
+  object-position: top;
+}
+
+.service-container .card {
+      /* height: 330px; */
+      width: 280px;
+      background-color: #ffffff;
+}
+@media (max-width: 1333px){
+  .service-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .service-container .card {
+    height: unset;
+    width: unset;
+    margin: 15px;
+    padding: 10px;
+  }
+
+  
+}
+
+
+@media (min-width: 1333px) {
+        /* card carrousel */
+
+        .up .container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+        }  
+        .service-container {
+          top: 60px;
+          left: calc(50% - 300px);
+          display: flex;
+          justify-content: center;
+    
+        }
+    
+        .service-container  .card {
+          display: flex;
+          border-radius: 10px;
+          box-shadow: -1rem 0 3rem #000;
+        /*   margin-left: -50px; */
+          transition: 0.4s ease-out;
+          position: relative;
+          left: 0px;
+        }
+    
+        .service-container .card:not(:first-child) {
+            margin-left: -50px;
+        }
+    
+        .service-container .card:hover {
+          transform: translateY(-20px);
+          transition: 0.4s ease-out;
+        }
+    
+        .service-container .card:hover ~ .card {
+          position: relative;
+          left: 50px;
+          transition: 0.4s ease-out;
+        }
+  }
+
+@media (min-width: 992px){
+  .navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+  }
+  .navbar-expand-lg .navbar-nav {
+    margin-right: 20px;
+  }
+
+
+}
+
+@media (max-width: 535px) {
+  h2.section-title {
+      font-size: 2em;
+      width: -webkit-fill-available;
+  }
+}
+
+.paragraph-lg {
+  font-size: 19px;
+}
+
+
+/*css for shrink header*/
+
+.shrink {
+  padding: 0.5rem 0.4rem;
+}
+
+.shrink img {
+  transform: scale(0.7);
+  transform-origin: top left;
+}
+.shrink a {
+  height: 70px;
+}
+
+.navbar-brand .font-tertiary .h3 {
+  transition:height 1s ease-in-out;
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+  color: rgb(255 184 99);
+  font-size: 50px;
+  margin-top: 30px;
+}
+
+.xp-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardPortfolio {
+  margin-bottom: 20px;
+}
