@@ -10,7 +10,7 @@ function EducationItem({ year, title, institution, icon }) {
         
         <div className="d-flex">
           <div className="mr-lg-5 mr-3">
-            <img  className="logo-education" src={`/assets/icon/${icon}.jpeg`} alt="icon-education"  />
+            <img  className="logo-education" src={`./assets/icon/${icon}.jpeg`} alt="icon-education"  />
           </div>
           <div>
             <p className="text-dark mb-1">{year}</p>
