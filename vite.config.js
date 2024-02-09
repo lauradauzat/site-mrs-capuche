@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  basa:"/site-mrs-capuche/", 
-  base:"/", 
+  base:"/site-mrs-capuche/", 
+  basa:"/", 
   publicDir:"/public/",
 })
