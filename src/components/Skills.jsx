@@ -1,5 +1,6 @@
 /**
  * 11/09/2026 — LD : compétences recadrées sur l’offre réelle (plus de dump GitHub : npm, Notion, Prisma).
+ * 11/09/2026 — LD : cartes compétences dans une row dédiée (PrestaShop ne se cale plus à côté du texte).
  */
 import PropTypes from "prop-types";
 
@@ -68,6 +69,8 @@ function Skills() {
               pour les indépendants. React quand il faut un outil métier.
             </p>
           </div>
+        </div>
+        <div className="row">
           <SkillCard title="PrestaShop" progress="85%" color="rgb(177 163 205)" />
           <SkillCard title="Développement Front-end" progress="90%" color="rgb(255 198 130)" />
           <SkillCard title="React" progress="80%" color="#e6e6e6" />
