@@ -11,6 +11,11 @@ body, p, .paragraph {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
 /* Typography */
 body {
   
@@ -83,6 +88,25 @@ h6, .h6 {
 
 .btn-primary:hover {
   background: #413857;
+}
+
+/* 11/09/2026 — LD : iframe agenda Google Appointment, pied promo masqué */
+.booking-embed {
+  margin: 0 auto 8px;
+  max-width: 900px;
+  border: 1px solid #e6e2ef;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  height: 700px;
+}
+
+.booking-embed iframe {
+  display: block;
+  width: 100%;
+  height: 880px;
+  min-height: 0;
+  border: 0;
 }
 
 .btn-transparent {
@@ -188,7 +212,7 @@ body {
 /*my css*/
 
 #logo-header {
-  height: 100px;
+  height: 72px;
 }
 
 .header {
@@ -257,7 +281,6 @@ body {
 .hero-area h1 {
   position: relative;
   z-index: 2;
-  font-size: 4rem;
 }
 
 p-lg, .paragraph-lg {
@@ -265,8 +288,8 @@ p-lg, .paragraph-lg {
 }
 
 .section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 72px;
+  padding-bottom: 72px;
 }
 
 .font-secondary {
@@ -274,7 +297,7 @@ p-lg, .paragraph-lg {
 }
 
 .section-title {
-  margin-bottom: 80px;
+  margin-bottom: 48px;
   font-family: 'IBM Plex Mono', monospace;
 }
 
@@ -368,7 +391,7 @@ h2, .h2 {
 }
 
 .section {
-  padding: 80px;
+  padding: 72px 0;
 }
 
 /* service */
@@ -399,23 +422,332 @@ h2, .h2 {
 
 /* /service */
 
+/* 11/09/2026 — LD : hero, nav visible (sans .collapse Tailwind), offre, tarifs, portfolio */
 .hero-area {
-  background-color: #9086ab;
-  background-image: url(/assets/images/Devices-amico.png);
-  background-position: center;
-  height: 300px;
-  background-size: unset;
-  background-position: 30% 30%;
-  background-attachment: fixed;
+  background-color: #413857;
+  background-image: linear-gradient(90deg, rgba(65, 56, 87, 0.94) 0%, rgba(65, 56, 87, 0.78) 48%, rgba(144, 134, 171, 0.35) 100%), url(/assets/images/Devices-amico.png);
+  background-position: right center;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
   background-repeat: no-repeat;
-
+  padding: 48px 0 56px;
 }
+
+.hero-kicker {
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #d8d2e6;
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.hero-lead {
+  color: #f3f0f8;
+  font-size: 1.1rem;
+  max-width: 36em;
+  margin-bottom: 28px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-actions .btn-light {
+  background: #fff;
+  color: #413857;
+}
+
+.hero-actions .btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+
+.hero-actions .btn-outline-light:hover {
+  background: #fff;
+  color: #413857;
+}
+
+/* 11/09/2026 — LD : raccourcis d’offre dans le hero */
+.hero-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.hero-service-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-service-link:hover,
+.hero-service-link:focus {
+  background: #fff;
+  color: #413857;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 48px;
+  align-items: start;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.about-identity {
+  text-align: center;
+}
+
+.about-name {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.15rem;
+  color: #413857;
+  margin: 16px 0 4px;
+}
+
+.about-role {
+  color: #4c4c4c;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.about-copy p {
+  color: #2c2740;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0 0 1.1em;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .about-copy {
+    text-align: left;
+  }
+}
+
+.site-nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.site-menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 4px;
+}
+
+.site-menu .nav-link {
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 10px 14px;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.site-menu .nav-link:hover,
+.site-menu .nav-link:focus {
+  color: #ffb863;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.menu-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  margin: 5px 0;
+}
+
+@media (max-width: 991.98px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 8px;
+  }
+
+  .site-menu.is-open {
+    display: flex;
+  }
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.service-card .card {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+.service-card .icon {
+  font-size: 2rem;
+  color: #413857;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 11/09/2026 — LD : pastilles outils avec logos */
+
+.skills-list li {
+  font-family: 'IBM Plex Mono', monospace;
+  background: #f4f1f8;
+  color: #413857;
+  padding: 8px 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skills-list img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.xp-card img {
+  max-height: 72px;
+  max-width: 140px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* 11/09/2026 — LD : PNG AB Formation (carré, marges internes) */
+.xp-card img[src*="abformation"] {
+  max-width: 160px;
+  max-height: 120px;
+}
+
+/* 11/09/2026 — LD : grille projets clients (sans OpenClassrooms) */
+.portfolio-thumb {
+  height: 180px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cardPortfolio {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+}
+
+.portfolio-card-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(65, 56, 87, 0.08);
+}
+
+.portfolio-card-body {
+  padding: 20px 24px 8px;
+}
+
+.portfolio-card-tags {
+  padding: 8px 24px 20px;
+}
+
+.portfolio-tag {
+  display: inline-block;
+  background: #f4f1f8;
+  color: #413857;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0 8px 8px 0;
+}
+
 
 .profile-img {
   object-fit: cover;
-  width: 224px;
+  width: 200px;
   border-radius: 50%;
-  height: 224px;
+  height: 200px;
   object-position: top;
 }
 
@@ -511,15 +843,11 @@ h2, .h2 {
 /*css for shrink header*/
 
 .shrink {
-  padding: 0.5rem 0.4rem;
+  padding: 0.5rem 1rem;
 }
 
-.shrink img {
-  transform: scale(0.7);
-  transform-origin: top left;
-}
-.shrink a {
-  height: 70px;
+.shrink #logo-header {
+  height: 52px;
 }
 
 .navbar-brand .font-tertiary .h3 {
@@ -540,6 +868,139 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
   align-items: center;
 }
 
+/* 11/09/2026 — LD : lien vers la formation AB Formation */
+.xp-course-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #413857;
+  font-size: 0.9rem;
+}
+
 .cardPortfolio {
   margin-bottom: 20px;
+}
+
+/* 11/09/2026 — LD : styles de la section tarifs */
+.tarifs-table-wrap {
+  overflow-x: auto;
+}
+.tarifs-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+.tarifs-table th,
+.tarifs-table td {
+  text-align: left;
+  padding: 16px 12px;
+  border-bottom: 1px solid #e6e2ef;
+  vertical-align: top;
+}
+.tarifs-table th {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #413857;
+  font-weight: 600;
+}
+.tarifs-table td strong {
+  display: block;
+  color: #413857;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+.tarif-detail {
+  display: block;
+  color: #4c4c4c;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+.tarif-price {
+  font-family: 'IBM Plex Mono', monospace;
+  color: #413857;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 1.05rem;
+}
+.tarifs-note {
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: #4c4c4c;
+}
+
+.tarif-group th {
+  background: #f4f1f8;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 10px 12px;
+  border-bottom: none;
+}
+
+.suivi-band {
+  margin-top: 40px;
+  background: #f4f1f8;
+  border-radius: 12px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.suivi-band-intro {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.suivi-band-icon {
+  color: #413857 !important;
+  font-size: 1.6rem !important;
+  margin-top: 4px !important;
+}
+
+.suivi-prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.suivi-price-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.suivi-price-label {
+  margin: 0 0 6px;
+  color: #413857;
+  font-size: 0.9rem;
+}
+
+.suivi-price-value {
+  margin: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  color: #413857;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+@media (max-width: 768px) {
+  .suivi-prices {
+    grid-template-columns: 1fr;
+  }
+
+  h2, .h2 {
+    font-size: clamp(2rem, 8vw, 3.2rem);
+  }
+
+  .hero-title {
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+  }
+}
+@media (max-width: 576px) {
+  .tarif-price {
+    white-space: normal;
+  }
 }

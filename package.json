@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build; npm run copy-assets; rm -rf docs ; cp -af dist docs",
+    "build": "vite build; npm run copy-assets; rm -rf docs ; cp -af dist docs; cp CNAME docs/CNAME",
     "copy-assets": "cp -rv assets dist/",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"

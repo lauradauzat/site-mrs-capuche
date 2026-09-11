@@ -1,53 +1,32 @@
-
 /**
- * Intro hook component
+ * 11/09/2026 — LD : intro sans montants (les prix restent dans Tarifs / bandeau suivi).
  */
 function Hook() {
-    return (
-        <section className="section about-area">
-          <div className="container">
-            <div className="row align-items-center">
-          
-
-            <div className="divide-Y divide-none">
+  return (
+    <section className="section about-area" id="intro">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-10 mx-auto">
             <p className="paragraph-md text-dark">
-                
-                </p>
-                <br />
-                
-                <p className="paragraph-md text-dark">
-                Vous avez un projet de création de site web ? Vous souhaitez améliorer votre site existant ? 
-                Mrs Capuche est là pour vous aider !
-                </p>
-                <br />
-               
-                <p className="paragraph-md text-dark">
-                Il existe de nombreux outils pour créer un site web, il est parfois difficile de s'y retrouver et de savoir quel est la meilleure solution pour son projet.
-                La première étape est de définir vos besoins et vos objectifs. 
-                </p>
-                <br />
-               
-                <p className="paragraph-md text-dark">
-                En fonction de vos besoins, je vous orienterai vers la solution la plus adaptée à votre projet. Wordpress, Prestashop, Site sur mesure, Application Web. 
-                </p> <br />
-               
-
-                <p className="paragraph-md text-dark">
-                Si vous souhaitez lancer un site de eCommerce (avec Prestashop), il est recommendé d'être autonome sur le suivi quotidien de ce denier. Je vous propose des formations pour débutant en partenariat avec AB Formation pour vous accompagner dans le lancement de votre boutique en ligne.
-                </p>
-                <br />
-               
-                <p className="paragraph-md text-dark">
-                Pour tous les sites, je vous propose une solution de A à Z de la création des maquettes jusqu'à la mise en production.
-                </p>
-           
-            </div>
-                
-        
-            </div>
+              Vous avez un projet de site, ou un site existant à reprendre&nbsp;?
+              Je vous accompagne de A à Z&nbsp;: maquettes, développement, mise en ligne.
+            </p>
+            <p className="paragraph-md text-dark mt-4">
+              Deux manières principales de faire. Soit un <strong>site vitrine statique</strong>,
+              livré clé en main, que je fais évoluer avec vous. Soit un <strong>WordPress</strong>,
+              pour mettre à jour textes, photos et actualités en toute liberté.
+              Pour vendre en ligne, on part sur <strong>PrestaShop</strong>.
+              S’il faut un outil métier (questionnaire, paiements, espace client), on le développe sur mesure.
+            </p>
+            <p className="paragraph-md text-dark mt-4">
+              Une fois le site en ligne, un <strong>suivi mensuel</strong> prend le relais&nbsp;:
+              sauvegardes, mises à jour, et jusqu’à une heure de changements.
+            </p>
           </div>
-        </section>
-      );
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Hook;

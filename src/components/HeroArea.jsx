@@ -1,90 +1,46 @@
-
 /**
- * HeroArea component.
+ * 11/09/2026 — LD : hero — raccourcis d’offre ; CTA réservation Google Calendar.
  */
-function HeroArea() {
-  return (
-    <section className="hero-area" id="parallax">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-11 mx-auto">
-            {/* <h1 className="text-white font-tertiary">
-              Salut, je suis <br /> Mrs Capuche <br /> <small>Développeuse Web <br/> Frontend <br /> React & Prestashop</small>
+const BOOKING_URL = "https://calendar.app.google/ScBQb2NhXWErhdXi9";
 
-            </h1> */}
+function HeroArea() {
+  const services = [
+    { href: "#offre-vitrine", label: "Site vitrine" },
+    { href: "#offre-wordpress", label: "WordPress" },
+    { href: "#offre-surmesure", label: "Sur mesure" },
+    { href: "#offre-prestashop", label: "PrestaShop" },
+    { href: "#offre-suivi", label: "Suivi & maintenance" },
+  ];
+
+  return (
+    <section className="hero-area" id="top">
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-lg-8 hero-copy">
+            <p className="hero-kicker">Développeuse web · Albi</p>
+            <h1 className="hero-title">Un site clair, à votre image, de la maquette à la mise en ligne.</h1>
+            <p className="hero-lead">
+              Sites vitrine, WordPress, PrestaShop ou développement sur mesure.
+              On choisit ensemble la solution qui vous convient.
+            </p>
+            <div className="hero-services" aria-label="Accès aux offres">
+              {services.map((service) => (
+                <a key={service.href} className="hero-service-link" href={service.href}>
+                  {service.label}
+                </a>
+              ))}
+            </div>
+            <div className="hero-actions">
+              <a className="btn btn-light" href="#tarifs">Voir les tarifs</a>
+              <a className="btn btn-outline-light" href={BOOKING_URL} target="_blank" rel="noreferrer">
+                Réserver un créneau
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      {/* <div className="layer-bg w-100">
-        <img
-          className="img-fluid w-100"
-          src="src/assets/illustrations/leaf-bg.png"
-          alt="bg-shape"
-        />
-      </div>
-      <div
-        className="layer"
-        id="l2"
-      >
-        <img src="src/assets/illustrations/dots-cyan.png" alt="bg-shape" />
-      </div>
-      <div
-        className="layer"
-        id="l3"
-      >
-        <img src="src/assets/illustrations/leaf-orange.png" alt="bg-shape" />
-      </div>
-      <div
-        className="layer"
-        id="l4"
-      >
-        <img src="src/assets/illustrations/dots-orange.png" alt="bg-shape" />
-      </div>
-      <div
-        className="layer"
-        id="l5"
-      >
-        <img src="src/assets/illustrations/leaf-yellow.png" alt="bg-shape" />
-      </div>
-      <div
-        className="layer"
-        id="l6"
-      >
-        <img src="src/assets/illustrations/leaf-cyan.png" alt="bg-shape" />
-      </div>
-      <div
-        className="layer"
-        id="l7"
-
-      >
-        <img src="src/assets/illustrations/dots-group-v.png" alt="bg-shape" />
-      </div>
-  
-      <div
-        className="layer"
-        id="l9"
-      >
-        <img src="src/assets/illustrations/leaf-cyan-2.png" alt="bg-shape" />
-      </div> */}
-      {/* social icon */}
-      <ul className="list-unstyled ml-5 mt-3 position-relative zindex-1">
-        <li className="mb-3">
-          <a className="text-white" href="https://www.linkedin.com/in/lauradauzat/">
-            <i className="ti-linkedin"></i>
-          </a>
-        </li>
-        <li className="mb-3">
-          <a className="text-white" href="https://www.malt.fr/profile/lauradauzat">
-            <i className="ti-malt"></i>
-          </a>
-        </li>
-      </ul>
-      {/* /social icon */}
     </section>
   );
-      
 }
 
 export default HeroArea;
-
-

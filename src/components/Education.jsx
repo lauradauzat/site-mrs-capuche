@@ -1,6 +1,5 @@
-
 /**
- * Education component.
+ * 11/09/2026 — LD : parcours, intitulés au féminin.
  */
 import PropTypes from 'prop-types';
 
@@ -40,12 +39,12 @@ EducationItem.propTypes = {
          
           <div className="row">
             <div className="col-lg-12 text-center">
-              <h2 className="section-title">Education</h2>
+              <h2 className="section-title">Parcours</h2>
             </div>
             {/* Use EducationItem component to render education items */}
             <EducationItem year="2014 - 2015" title="Master en Information et Communication" institution="University Of Washington" icon="uw"/>
-            <EducationItem year="2021 - 2022" title="Développeur Web" institution="OpenClassrooms" icon="oc" />
-            <EducationItem year="2022 - 2024" title="Développeur d'Application Javascript React" institution="OpenClassrooms" icon="oc" />
+            <EducationItem year="2021 - 2022" title="Développeuse web" institution="OpenClassrooms" icon="oc" />
+            <EducationItem year="2022 - 2024" title="Développeuse d’applications JavaScript React" institution="OpenClassrooms" icon="oc" />
           </div>
         </div>
       </section>
